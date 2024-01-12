@@ -193,7 +193,7 @@ def fetch_video_comments(channel_id):
 
 # Fetch data from API and store it in MongoDB
 
-uri = "mongodb+srv://vivek:YoutubeProject@cluster-youtube.odjjzux.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://vivek:Youtube<password>@cluster-youtube.odjjzux.mongodb.net/?retryWrites=true&w=majority"
 
 # Create a new client and connect to the server
 client = MongoClient(uri, server_api=ServerApi('1'))
@@ -262,7 +262,7 @@ def migrate_data_to_mysql(mongodb_collection_name):
 
     # establishing to MySQL
     conn = sql.connect(user='root',
-                    password='A@sD#F45',
+                    password='<password>',
                     host='localhost',
                     database = 'youtube')
     if conn:
@@ -273,7 +273,7 @@ def migrate_data_to_mysql(mongodb_collection_name):
     #cursor = conn.cursor()
 
     # establishing connection to mongodb
-    uri = "mongodb+srv://vivek:YoutubeProject@cluster-youtube.odjjzux.mongodb.net/?retryWrites=true&w=majority"
+    uri = "mongodb+srv://vivek:Youtube<password>@cluster-youtube.odjjzux.mongodb.net/?retryWrites=true&w=majority"
 
     # Create a new client and connect to the server
     client = MongoClient(uri, server_api=ServerApi('1'))
@@ -425,7 +425,7 @@ if migrate:
 
 # establishing to MySQL
 conn = sql.connect(user='root',
-                        password='A@sD#F45',
+                        password='<password>',
                         host='localhost',
                         database = 'youtube')
 if conn:
