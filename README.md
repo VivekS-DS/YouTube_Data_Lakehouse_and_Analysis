@@ -141,12 +141,12 @@ Youtube_API/
 
 | | |
 |---|---|
-| ![Screenshot 1](Screenshot_1.png) | ![Screenshot 2](Screenshot_2.png) |
-| ![Screenshot 3](Screenshot_3.png) | ![Screenshot 4](Screenshot_4.png) |
-| ![Screenshot 5](Screenshot_5.png) | ![Screenshot 6](Screenshot_6.png) |
-| ![Screenshot 7](Screenshot_7.png) | ![Screenshot 8](Screenshot_8.png) |
-| ![Screenshot 9](Screenshot_9.png) | ![Screenshot 10](Screenshot_10.png) |
-| ![Screenshot 11](Screenshot_11.png) | |
+| **App home**<br>![App home](01-app-home.png) | **1. Video titles & channels**<br>![Video titles and channels](02-query1-video-titles-and-channels.png) |
+| **2. Channels by video count**<br>![Channels ranked by video count](03-query2-channels-by-video-count.png) | **3. Top 10 most-viewed videos**<br>![Top 10 most-viewed videos](04-query3-top10-most-viewed-videos.png) |
+| **4. Comment count per video**<br>![Comment count per video](05-query4-comment-count-per-video.png) | **5. Highest likes per channel**<br>![Videos with highest likes per channel](06-query5-highest-likes-per-channel.png) |
+| **6. Likes per video**<br>![Likes per video](07-query6-likes-per-video.png) | **7. Total views per channel**<br>![Total views per channel](08-query7-total-views-per-channel.png) |
+| **8. Channels published in 2022**<br>![Channels that published videos in 2022](09-query8-channels-published-2022.png) | **9. Average video duration per channel**<br>![Average video duration per channel](10-query9-average-duration-per-channel.png) |
+| **10. Most-commented videos**<br>![Most-commented videos](11-query10-most-commented-videos.png) | |
 
 ---
 
