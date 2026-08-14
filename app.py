@@ -196,16 +196,16 @@ def fetch_video_comments(channel_id):
 uri = st.secrets["MONGODB_URI"]
 
 
-client = MongoClient(uri, server_api=ServerApi('1'))
-
-# Send a ping to confirm a successful connection
+client = None
 try:
+    client = MongoClient(uri, server_api=ServerApi('1'))
+    # Send a ping to confirm a successful connection
     client.admin.command('ping')
     print("Successfully connected to MongoDB!")
 except Exception as e:
     print(e)
 
-db = client["Youtube"]
+db = client["Youtube"] if client is not None else None
 
 def channel_details(Ch_ID):
     df1 = fetch_channel_details(Ch_ID)
