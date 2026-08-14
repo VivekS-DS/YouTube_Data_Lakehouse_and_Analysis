@@ -136,7 +136,7 @@ def fetch_videos(channel_id):
                       'thumbnail'     : vidstat["snippet"]['thumbnails']['default']['url'],
                       'video_quality' : vidstat['contentDetails']['definition'],
                       'views'         : int(vidstat['statistics']['viewCount']),
-                      'likes'         : vidstat['statistics'].get('likeCount'),
+                      'likes'         : vidstat['statistics'].get('likeCount', 0),
                       'favorite'      : int(vidstat['statistics']['favoriteCount']),
                       'comment_count' : int(vidstat['statistics'].get('commentCount',0)),
                       'description'   : vidstat['snippet']['description'],
@@ -264,7 +264,8 @@ def migrate_data_to_mysql(mongodb_collection_name):
     conn = sql.connect(user=st.secrets["MYSQL_USER"],
                         password=st.secrets["MYSQL_PASSWORD"],
                         host=st.secrets["MYSQL_HOST"],
-                        database=st.secrets["MYSQL_DATABASE"])
+                        database=st.secrets["MYSQL_DATABASE"],
+                        use_pure=True)
     if conn:
         print('Connected to MySQL successfully')
     else:
@@ -336,7 +337,7 @@ def migrate_data_to_mysql(mongodb_collection_name):
                 video.get("thumbnail", "N/A"),
                 video.get("video_quality", "N/A"),
                 int(video.get("views", 0)),
-                int(video.get("likes", 0)),
+                int(video.get("likes") or 0),
                 int(video.get("favorite", 0)),
                 int(video.get("comment_count", 0)),
                 video.get("description", "N/A"),
@@ -427,7 +428,8 @@ if migrate:
 conn = sql.connect(user=st.secrets["MYSQL_USER"],
                         password=st.secrets["MYSQL_PASSWORD"],
                         host=st.secrets["MYSQL_HOST"],
-                        database=st.secrets["MYSQL_DATABASE"])
+                        database=st.secrets["MYSQL_DATABASE"],
+                        use_pure=True)
 if conn:
     print('Connected to MySQL successfully')
 else:
