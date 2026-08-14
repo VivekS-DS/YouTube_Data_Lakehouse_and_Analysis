@@ -137,6 +137,19 @@ Youtube_API/
 
 ---
 
+## Screenshots
+
+| | |
+|---|---|
+| ![Screenshot 1](Screenshot_1.png) | ![Screenshot 2](Screenshot_2.png) |
+| ![Screenshot 3](Screenshot_3.png) | ![Screenshot 4](Screenshot_4.png) |
+| ![Screenshot 5](Screenshot_5.png) | ![Screenshot 6](Screenshot_6.png) |
+| ![Screenshot 7](Screenshot_7.png) | ![Screenshot 8](Screenshot_8.png) |
+| ![Screenshot 9](Screenshot_9.png) | ![Screenshot 10](Screenshot_10.png) |
+| ![Screenshot 11](Screenshot_11.png) | |
+
+---
+
 ## Security Notes
 
 - No credentials are hardcoded in source — API keys are entered at runtime, and database credentials are loaded from `st.secrets`.
